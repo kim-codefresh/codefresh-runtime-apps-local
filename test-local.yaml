@@ -9,9 +9,9 @@ metadata:
 spec:
   project: default
   source:
-    path: resources
-    repoURL: https://github.com/eti-codefresh/guestbook-local.git
-    targetRevision: main
+    path: helm-guestbook
+    repoURL: https://github.com/idan-codefresh/argocd-example-apps.git
+    targetRevision: master
   destination:
     name: in-cluster
     namespace: eti-local-runtime
