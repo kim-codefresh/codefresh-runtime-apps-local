@@ -5,13 +5,13 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
   labels:
-    codefresh.io/product: my-product   
+    codefresh.io/product: my-product
 spec:
   project: default
   source:
     path: resources
     repoURL: https://github.com/eti-codefresh/guestbook-local.git
-    targetRevision: HEAD
+    targetRevision: main
   destination:
     name: in-cluster
     namespace: eti-local-runtime
