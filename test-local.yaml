@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: helm-guestbook
-    repoURL: https://github.com/eti-codefresh/argocd-example-apps.git
+    repoURL: https://github.com/idan-codefresh/argocd-example-apps.git
     targetRevision: master
   destination:
     name: in-cluster
