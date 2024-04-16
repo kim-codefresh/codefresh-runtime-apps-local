@@ -9,8 +9,8 @@ metadata:
 spec:
   project: default
   source:
-    path: helm-guestbook
-    repoURL: https://github.com/eti-codefresh/argocd-example-apps.git
+    path: resorces
+    repoURL: https://github.com/eti-codefresh/guestbook-local.git
     targetRevision: master
   destination:
     name: in-cluster
