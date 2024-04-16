@@ -11,7 +11,7 @@ spec:
   source:
     path: resources
     repoURL: https://github.com/eti-codefresh/guestbook-local.git
-    targetRevision: master
+    targetRevision: HEAD
   destination:
     name: in-cluster
     namespace: eti-local-runtime
