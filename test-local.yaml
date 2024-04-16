@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    path: resorces
+    path: resources
     repoURL: https://github.com/eti-codefresh/guestbook-local.git
     targetRevision: master
   destination:
