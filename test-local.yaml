@@ -10,11 +10,11 @@ spec:
   project: default
   source:
     path: resources
-    repoURL: https://github.com/eti-codefresh/guestbook-local.git
+    repoURL: https://github.com/kim-codefresh/guestbook-local.git
     targetRevision: HEAD
   destination:
     name: in-cluster
-    namespace: eti-local-runtime
+    namespace: kim-local-runtime
   syncPolicy:
     automated:
       prune: false
