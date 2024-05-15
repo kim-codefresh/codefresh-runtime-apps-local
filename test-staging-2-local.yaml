@@ -1,27 +1,29 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  labels:
+    "codefresh.io/product": "my-product"
   name: test-staging-2-local
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
 spec:
   project: default
   source:
-    path: .
-    repoURL: https://github.com/kim-codefresh/codefresh-runtime-apps-local.git
+    path: resources-staging-2
+    repoURL: https://github.com/kim-codefresh/guestbook-local.git
     targetRevision: HEAD
   destination:
     name: in-cluster
     namespace: staging-2
   syncPolicy:
     automated:
-      prune: false
+      prune: true
       selfHeal: false
       allowEmpty: false
     syncOptions:
       - PrunePropagationPolicy=foreground
       - Replace=false
-      - PruneLast=false
+      - PruneLast=true
       - Validate=true
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=false
