@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: resources-staging
-    repoURL: https://github.com/kim-codefresh/guestbook-locall.git
+    repoURL: https://github.com/kim-codefresh/guestbook-local.git
     targetRevision: HEAD
   destination:
     name: in-cluster
