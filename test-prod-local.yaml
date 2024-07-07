@@ -16,10 +16,6 @@ spec:
     name: in-cluster
     namespace: production
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-      allowEmpty: false
     syncOptions:
       - PrunePropagationPolicy=foreground
       - Replace=false
