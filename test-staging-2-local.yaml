@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  labels:
+  annotations:
     "codefresh.io/product": "my-product"
   name: test-staging-2-local
   finalizers:
