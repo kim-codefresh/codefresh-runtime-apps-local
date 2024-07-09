@@ -11,7 +11,7 @@ spec:
   source:
     path: resources-prod
     repoURL: https://github.com/kim-codefresh/guestbook-local.git
-    targetRevision: HEAD
+    targetRevision: local
   destination:
     name: in-cluster
     namespace: production
