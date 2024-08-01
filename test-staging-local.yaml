@@ -14,7 +14,7 @@ spec:
     targetRevision: local-2
   destination:
     name: in-cluster
-    namespace: staging-2
+    namespace: staging
   syncPolicy:
     automated:
       prune: true
