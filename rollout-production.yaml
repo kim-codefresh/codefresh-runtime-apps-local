@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kim-codefresh/rollout-test-git-source.git
-    targetRevision: local
+    targetRevision: local-2
     path: rollout-apps/production
   destination:
     name: in-cluster
