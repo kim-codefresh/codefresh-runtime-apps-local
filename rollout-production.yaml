@@ -17,14 +17,14 @@ spec:
   destination:
     name: in-cluster
     namespace: production
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
-    syncOptions:
-      - PrunePropagationPolicy=foreground
-      - Replace=false
-      - PruneLast=false
-      - Validate=true
-      - CreateNamespace=true
-      - ApplyOutOfSyncOnly=false
+  # syncPolicy:
+  #   automated:
+  #     prune: false
+  #     selfHeal: false
+  #   syncOptions:
+  #     - PrunePropagationPolicy=foreground
+  #     - Replace=false
+  #     - PruneLast=false
+  #     - Validate=true
+  #     - CreateNamespace=true
+  #     - ApplyOutOfSyncOnly=false
