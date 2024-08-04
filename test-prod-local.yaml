@@ -15,17 +15,17 @@ spec:
   destination:
     name: in-cluster
     namespace: production
-  # syncPolicy:
-  #   automated:
-  #     prune: true
-  #     selfHeal: true
-  #     allowEmpty: false
-  #   syncOptions:
-  #     - PrunePropagationPolicy=foreground
-  #     - Replace=false
-  #     - PruneLast=true
-  #     - Validate=true
-  #     - CreateNamespace=true
-  #     - ApplyOutOfSyncOnly=false
-  #     - ServerSideApply=true
-  #     - RespectIgnoreDifferences=false
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
+    syncOptions:
+      - PrunePropagationPolicy=foreground
+      - Replace=false
+      - PruneLast=true
+      - Validate=true
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=false
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=false
