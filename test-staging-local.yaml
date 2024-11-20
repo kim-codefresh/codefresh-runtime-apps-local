@@ -16,10 +16,10 @@ spec:
     name: in-cluster
     namespace: staging
   syncPolicy:
-    automated:
-      prune: false
-      selfHeal: false
-      allowEmpty: false
+    # automated:
+    #   prune: false
+    #   selfHeal: false
+    #   allowEmpty: false
     syncOptions:
       - PrunePropagationPolicy=foreground
       - Replace=false
