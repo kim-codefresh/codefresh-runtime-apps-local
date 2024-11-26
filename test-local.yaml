@@ -17,9 +17,9 @@ spec:
     namespace: dev
   syncPolicy:
     automated:
-      prune: false
-      selfHeal: false
-      allowEmpty: false
+      prune: true
+      selfHeal: true
+      allowEmpty: true
     syncOptions:
       - PrunePropagationPolicy=foreground
       - Replace=false
