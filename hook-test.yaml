@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: hook-test
+  annotations:
+    version: 0.0.1
+    codefresh.io/workflow-origin: promotion
+spec:
+  serviceAccountName: promotion-template
+  arguments:
+    parameters:
+    - name: BANANA
+  entrypoint: echo-post-action
+  templates:
+  - name: echo-post-action
+    script:
+      image: alpine
+      command:
+      - sh
+      source: |
+        sleep 60
+        echo "finish"
+        # exit 1
