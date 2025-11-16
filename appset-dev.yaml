@@ -16,7 +16,7 @@ spec:
       source:
         repoURL: https://github.com/kim-codefresh/guestbook-local.git
         targetRevision: local
-        path: resources
+        path: resources/*
       destination:
         server: https://kubernetes.default.svc
         namespace: "{{appName}}"
