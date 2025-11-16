@@ -6,7 +6,6 @@ spec:
   generators:
     - list:
         elements:
-          # Generate 250 apps: guestbook-ui-1 to guestbook-ui-250
           {{- range $i := until 250 }}
           - appName: guestbook-ui-{{ add $i 1 }}
           {{- end }}
@@ -15,7 +14,7 @@ spec:
       name: "{{appName}}"
     spec:
       source:
-        repoURL: https://github.com/kim-codefresh/guestbook-local.git   # replace with your repo
+        repoURL: https://github.com/kim-codefresh/guestbook-local.git
         targetRevision: local
         path: resources
       destination:
