@@ -1,36 +1,36 @@
-apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
-metadata:
-  name: guestbook-ui-bulk-dev
-spec:
-  generators:
-    - list:
-        elements:
-          {{- range $i := until 250 }}
-          - appName: guestbook-ui-{{ add $i 1 }}
-          {{- end }}
-  template:
-    metadata:
-      name: "{{appName}}"
-    spec:
-      source:
-        repoURL: https://github.com/kim-codefresh/guestbook-local.git
-        targetRevision: local
-        path: resources/*
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: "{{appName}}"
-      syncPolicy:
-        automated:
-          prune: true
-          selfHeal: true
-          allowEmpty: true
-      syncOptions:
-        - PrunePropagationPolicy=foreground
-        - Replace=false
-        - PruneLast=false
-        - Validate=true
-        - CreateNamespace=true
-        - ApplyOutOfSyncOnly=false
-        - ServerSideApply=true
-        - RespectIgnoreDifferences=false
+# apiVersion: argoproj.io/v1alpha1
+# kind: ApplicationSet
+# metadata:
+#   name: guestbook-ui-bulk-dev
+# spec:
+#   generators:
+#     - list:
+#         elements:
+#           {{- range $i := until 250 }}
+#           - appName: guestbook-ui-{{ add $i 1 }}
+#           {{- end }}
+#   template:
+#     metadata:
+#       name: "{{appName}}"
+#     spec:
+#       source:
+#         repoURL: https://github.com/kim-codefresh/guestbook-local.git
+#         targetRevision: local
+#         path: resources/*
+#       destination:
+#         server: https://kubernetes.default.svc
+#         namespace: "{{appName}}"
+#       syncPolicy:
+#         automated:
+#           prune: true
+#           selfHeal: true
+#           allowEmpty: true
+#       syncOptions:
+#         - PrunePropagationPolicy=foreground
+#         - Replace=false
+#         - PruneLast=false
+#         - Validate=true
+#         - CreateNamespace=true
+#         - ApplyOutOfSyncOnly=false
+#         - ServerSideApply=true
+#         - RespectIgnoreDifferences=false
