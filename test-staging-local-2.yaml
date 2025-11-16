@@ -3,7 +3,7 @@ kind: Application
 metadata:
   annotations:
     "codefresh.io/product": "my-product"
-  name: test-staging-local
+  name: test-staging-local-2
   finalizers:
     - resources-finalizer.argocd.argoproj.io/foreground
 spec:
