@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: guestbook-ui-bulk-dev
+spec:
+  generators:
+    - list:
+        elements:
+          # Generate 250 apps: guestbook-ui-1 to guestbook-ui-250
+          {{- range $i := until 250 }}
+          - appName: guestbook-ui-{{ add $i 1 }}
+          {{- end }}
+  template:
+    metadata:
+      name: "{{appName}}"
+    spec:
+      source:
+        repoURL: https://github.com/kim-codefresh/guestbook-local.git   # replace with your repo
+        targetRevision: local
+        path: resources
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: "{{appName}}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
