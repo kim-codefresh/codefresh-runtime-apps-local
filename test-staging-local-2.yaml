@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    path: resources-staging-2
+    path: resources-2-staging
     repoURL: https://github.com/kim-codefresh/guestbook-local.git
     targetRevision: local
   destination:
